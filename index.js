@@ -1,20 +1,7 @@
 import * as THREE from 'three';
-// import {BufferGeometryUtils} from 'BufferGeometryUtils';
-// import {scene, renderer, camera, runtime, world, physics, ui, rig, app, appManager} from 'app';
 import {Sky} from './Sky.js';
 import metaversefile from 'metaversefile';
 const {useApp, useFrame, useLocalPlayer} = metaversefile;
-
-/* const localVector = new THREE.Vector3();
-const localVector2 = new THREE.Vector3();
-const localVector3 = new THREE.Vector3();
-const localQuaternion = new THREE.Quaternion();
-const localEuler = new THREE.Euler();
-const localMatrix = new THREE.Matrix4();
-const localRaycaster = new THREE.Raycaster();
-const localRay = new THREE.Ray();
-const localColor = new THREE.Color();
-const localColor2 = new THREE.Color(); */
 
 export default () => {
   const app = useApp();
