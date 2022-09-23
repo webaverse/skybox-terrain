@@ -49,7 +49,7 @@ export default () => {
     uniforms.mieDirectionalG.value = effectController.mieDirectionalG;
 
     // const { position } = useLocalPlayer().leftHand;
-    effectController.azimuth = (0.05 + (Date.now() / 4000) * 0.1) % 1;
+    effectController.azimuth = (0.05 + (Date.now() / 5000) * 0.1) % 1;
     // effectController.azimuth = Math.min(Math.max(-position.z / 30, -0.3), 0.3);
     const theta = Math.PI * (effectController.inclination - 0.5);
     const phi = 2 * Math.PI * (effectController.azimuth - 0.5);
