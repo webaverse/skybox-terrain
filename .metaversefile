@@ -1,5 +1,5 @@
 {
-  "name": "skybox",
-  "description": "Skybox",
+  "name": "skybox-terrain",
+  "description": "skybox-terrain",
   "start_url": "index.js"
 }
