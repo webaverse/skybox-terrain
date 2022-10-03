@@ -18,13 +18,14 @@ export default () => {
     mieCoefficient: 0.1,
     mieDirectionalG: 0.9999,
     inclination: 0, // elevation / inclination
-    azimuth: 0, // Facing front,
+    azimuth: 0.4, // Facing front,
     // exposure: renderer.toneMappingExposure
   };
 
   const ambientLight = new THREE.AmbientLight('#fff', 0.5);
   app.add(ambientLight);
 
+  skyManager.initSkyLight();
   const skyLight = skyManager.getSkyLight();
 
   app.add(skyLight);
@@ -48,9 +49,7 @@ export default () => {
     uniforms.mieCoefficient.value = effectController.mieCoefficient;
     uniforms.mieDirectionalG.value = effectController.mieDirectionalG;
 
-    // const { position } = useLocalPlayer().leftHand;
     effectController.azimuth = (0.05 + (Date.now() / 5000) * 0.1) % 1;
-    // effectController.azimuth = Math.min(Math.max(-position.z / 30, -0.3), 0.3);
     const theta = Math.PI * (effectController.inclination - 0.5);
     const phi = 2 * Math.PI * (effectController.azimuth - 0.5);
 
